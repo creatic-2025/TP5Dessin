@@ -1,16 +1,11 @@
 """
-Starting Template
-
-Once you have learned how to use classes, you can begin your program with this
-template.
-
-If Python and Arcade are installed, this example can be run from the command line with:
-python -m arcade.examples.starting_template
+Créé par Dorian B. Girard le 15 Janvier 2026.
+Une création d'une image statique avec Arcade.
 """
 import arcade
 
-WINDOW_WIDTH = 1280
-WINDOW_HEIGHT = 720
+SCREEN_WIDTH = 1280
+SCREEN_HEIGHT = 720
 WINDOW_TITLE = "Starting Template"
 
 
@@ -26,7 +21,7 @@ class GameView(arcade.View):
     def __init__(self):
         super().__init__()
 
-        self.background_color = arcade.color.AMAZON
+        self.background_color = arcade.color.WHITE
 
         # If you have sprite lists, you should create them here,
         # and set them to None
@@ -36,17 +31,6 @@ class GameView(arcade.View):
         # Do changes needed to restart the game here if you want to support that
         pass
 
-    def on_draw(self):
-        """
-        Render the screen.
-        """
-
-        # This command should happen before we start drawing. It will clear
-        # the screen to the background color, and erase what we drew last frame.
-        self.clear()
-
-        # Call draw() on all your sprite lists below
-
     def on_update(self, delta_time):
         """
         All the logic to move, and the game logic goes here.
@@ -54,6 +38,17 @@ class GameView(arcade.View):
         need it.
         """
         pass
+
+    def on_draw(self):
+        """
+        Créé le couché de soleil avec des rectangles et des cercles.
+        """
+        self.clear()
+        background_color = (83, 113, 211, 255)
+        arcade.set_background_color(background_color)
+        arcade.draw_lrbt_rectangle_filled(530, 770, 300, 380, (169, 157,135))
+        affichage_montreal_yul = arcade.Text("MONTRÉAL", 537, 330, arcade.color.WHITE, 36)
+        affichage_montreal_yul.draw()
 
     def on_key_press(self, key, key_modifiers):
         """
@@ -92,7 +87,7 @@ class GameView(arcade.View):
 def main():
     """ Main function """
     # Create a window class. This is what actually shows up on screen
-    window = arcade.Window(WINDOW_WIDTH, WINDOW_HEIGHT, WINDOW_TITLE)
+    window = arcade.Window(SCREEN_WIDTH, SCREEN_HEIGHT, WINDOW_TITLE)
 
     # Create and setup the GameView
     game = GameView()
