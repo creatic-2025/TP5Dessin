@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3107e381-76a2-45d8-a386-bf6c83a22602" name="Changes" comment="Recreating the signage at YUL.">
+    <list default="true" id="3107e381-76a2-45d8-a386-bf6c83a22602" name="Changes" comment="Creating a simple sunset landscape using Arcade.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
@@ -84,12 +84,21 @@
       <option name="project" value="LOCAL" />
       <updated>1768511430005</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Creating a simple sunset landscape using Arcade.">
+      <option name="closed" value="true" />
+      <created>1768589765118</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1768589765118</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Init" />
     <MESSAGE value="Recreating the signage at YUL." />
-    <option name="LAST_COMMIT_MESSAGE" value="Recreating the signage at YUL." />
+    <MESSAGE value="Creating a simple sunset landscape using Arcade." />
+    <option name="LAST_COMMIT_MESSAGE" value="Creating a simple sunset landscape using Arcade." />
   </component>
 </project>

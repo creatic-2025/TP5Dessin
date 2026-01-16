@@ -9,6 +9,16 @@ SCREEN_HEIGHT = 720
 WINDOW_TITLE = "Starting Template"
 
 
+#RECTANGLES *
+#CERCLES *
+#TRIANGLES *
+#ARC
+#ELLIPSE
+#LIGNE
+#POLYGONE
+#POINT
+#TEXTE
+
 class GameView(arcade.View):
     """
     Main application class.
@@ -46,16 +56,32 @@ class GameView(arcade.View):
         self.clear()
         background_color = (255, 255, 255, 255)
         arcade.set_background_color(background_color)
-        arcade.draw_lrbt_rectangle_filled(0, SCREEN_WIDTH, 330, 395, (79, 120, 192))
-        arcade.draw_lrbt_rectangle_filled(0, SCREEN_WIDTH, 395, 460, (176, 128, 188))
-        arcade.draw_lrbt_rectangle_filled(0, SCREEN_WIDTH, 460, 525, (227, 81, 150))
-        arcade.draw_lrbt_rectangle_filled(0, SCREEN_WIDTH, 525, 590, (228, 131, 132))
-        arcade.draw_lrbt_rectangle_filled(0, SCREEN_WIDTH, 590, 655, (255, 131, 66))
-        arcade.draw_lrbt_rectangle_filled(0, SCREEN_WIDTH, 655, SCREEN_HEIGHT, (255, 197, 79))
+        """
+        Création des rectangles qui définit le couché de soleil
+        """
 
+        arcade.draw_lrbt_rectangle_filled(0, SCREEN_WIDTH, 335, 370, (255, 197, 79))
+        arcade.draw_lrbt_rectangle_filled(0, SCREEN_WIDTH, 370, 405, (255, 164, 73))
+        arcade.draw_lrbt_rectangle_filled(0, SCREEN_WIDTH, 405, 440, (255, 131, 66))
+        arcade.draw_lrbt_rectangle_filled(0, SCREEN_WIDTH, 440, 475, (242, 131, 99))
+        arcade.draw_lrbt_rectangle_filled(0, SCREEN_WIDTH, 475, 510, (228, 131, 132))
+        arcade.draw_lrbt_rectangle_filled(0, SCREEN_WIDTH, 510, 545, (228, 106, 141))
+        arcade.draw_lrbt_rectangle_filled(0, SCREEN_WIDTH, 545, 580, (227, 81, 150))
+        arcade.draw_lrbt_rectangle_filled(0, SCREEN_WIDTH, 580, 615, (202, 105, 169))
+        arcade.draw_lrbt_rectangle_filled(0, SCREEN_WIDTH, 615, 650, (176, 128, 188))
+        arcade.draw_lrbt_rectangle_filled(0, SCREEN_WIDTH, 650, 685, (128, 124, 190))
+        arcade.draw_lrbt_rectangle_filled(0, SCREEN_WIDTH, 685, SCREEN_HEIGHT, (79, 120, 192))
 
-
-
+        """
+        Créer le ballon de plage et la plage.
+        """
+        arcade.draw_lrbt_rectangle_filled(0, SCREEN_WIDTH, 0, 200, arcade.csscolor.BEIGE)
+        arcade.draw_circle_filled(800, 130, 50, (255, 255, 255))
+        arcade.draw_circle_filled(800, 130, 10, (0, 207, 250))
+        arcade.draw_triangle_filled(800, 138, 780, 177, 820, 177, (253, 21, 0))
+        arcade.draw_triangle_filled(809, 130, 847, 110, 847, 145, (255, 214, 38))
+        arcade.draw_triangle_filled(793, 130, 755, 110, 755, 145, (1, 206, 253))
+        arcade.draw_triangle_filled(800, 123, 780, 83, 820, 83, (0, 188, 64))
     def on_key_press(self, key, key_modifiers):
         """
         Called whenever a key on the keyboard is pressed.
