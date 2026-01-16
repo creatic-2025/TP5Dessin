@@ -44,11 +44,17 @@ class GameView(arcade.View):
         Créé le couché de soleil avec des rectangles et des cercles.
         """
         self.clear()
-        background_color = (83, 113, 211, 255)
+        background_color = (255, 255, 255, 255)
         arcade.set_background_color(background_color)
-        arcade.draw_lrbt_rectangle_filled(530, 770, 300, 380, (169, 157,135))
-        affichage_montreal_yul = arcade.Text("MONTRÉAL", 537, 330, arcade.color.WHITE, 36)
-        affichage_montreal_yul.draw()
+        arcade.draw_lrbt_rectangle_filled(0, SCREEN_WIDTH, 330, 395, (79, 120, 192))
+        arcade.draw_lrbt_rectangle_filled(0, SCREEN_WIDTH, 395, 460, (176, 128, 188))
+        arcade.draw_lrbt_rectangle_filled(0, SCREEN_WIDTH, 460, 525, (227, 81, 150))
+        arcade.draw_lrbt_rectangle_filled(0, SCREEN_WIDTH, 525, 590, (228, 131, 132))
+        arcade.draw_lrbt_rectangle_filled(0, SCREEN_WIDTH, 590, 655, (255, 131, 66))
+        arcade.draw_lrbt_rectangle_filled(0, SCREEN_WIDTH, 655, SCREEN_HEIGHT, (255, 197, 79))
+
+
+
 
     def on_key_press(self, key, key_modifiers):
         """
