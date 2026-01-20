@@ -103,10 +103,8 @@ class GameView(arcade.View):
         Créer l'océan avec les vagues
         """
         arcade.draw_lrbt_rectangle_filled(0, SCREEN_WIDTH, 200, 335, (0, 105, 148))
-        arcade.draw_lrbt_rectangle_filled(0, SCREEN_WIDTH,  300, 335, (100, 178, 212))
+        arcade.draw_lrbt_rectangle_filled(0, SCREEN_WIDTH, 300, 335, (100, 178, 212))
         arcade.draw_lrbt_rectangle_filled(0, SCREEN_WIDTH, 265, 300, (50, 142, 180))
-        arcade.draw_arc_filled()
-
 
     def on_key_press(self, key, key_modifiers):
         """
