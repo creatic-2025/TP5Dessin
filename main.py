@@ -12,12 +12,12 @@ WINDOW_TITLE = "Starting Template"
 #RECTANGLES *
 #CERCLES *
 #TRIANGLES *
-#ARC
-#ELLIPSE
+#ARC *
+#ELLIPSE *
 #LIGNE
 #POLYGONE
 #POINT
-#TEXTE
+#TEXTE *
 
 class GameView(arcade.View):
     """
@@ -75,13 +75,39 @@ class GameView(arcade.View):
         """
         Créer le ballon de plage et la plage.
         """
-        arcade.draw_lrbt_rectangle_filled(0, SCREEN_WIDTH, 0, 200, arcade.csscolor.BEIGE)
+        arcade.draw_lrbt_rectangle_filled(0, SCREEN_WIDTH, 0, 200, (236, 204, 162))
         arcade.draw_circle_filled(800, 130, 50, (255, 255, 255))
         arcade.draw_circle_filled(800, 130, 10, (0, 207, 250))
         arcade.draw_triangle_filled(800, 138, 780, 177, 820, 177, (253, 21, 0))
         arcade.draw_triangle_filled(809, 130, 847, 110, 847, 145, (255, 214, 38))
         arcade.draw_triangle_filled(793, 130, 755, 110, 755, 145, (1, 206, 253))
         arcade.draw_triangle_filled(800, 123, 780, 83, 820, 83, (0, 188, 64))
+        arcade.draw_ellipse_filled(600, 170, 150, 60, (151, 112, 88))
+        arcade.draw_ellipse_filled(650, 180, 150, 40, (151, 112, 88))
+        arcade.draw_ellipse_filled(960, 180, 150, 40, (151, 112, 88))
+        arcade.draw_ellipse_filled(700, 180, 150, 40, (151, 112, 88))
+        arcade.draw_ellipse_filled(400, 180, 150, 40, (151, 112, 88))
+        arcade.draw_ellipse_filled(520, 170, 150, 60, (151, 112, 88))
+        arcade.draw_ellipse_filled(1000, 170, 150, 60, (151, 112, 88))
+        arcade.draw_ellipse_filled(300, 170, 150, 60, (151, 112, 88))
+        arcade.draw_ellipse_filled(820, 190, 150, 20, (151, 112, 88))
+
+        """
+        Le texte 
+        """
+
+        affichage = arcade.Text("plage.", 20, 40, arcade.csscolor.BLACK, 40)
+        affichage.draw()
+
+        """
+        Créer l'océan avec les vagues
+        """
+        arcade.draw_lrbt_rectangle_filled(0, SCREEN_WIDTH, 200, 335, (0, 105, 148))
+        arcade.draw_lrbt_rectangle_filled(0, SCREEN_WIDTH,  300, 335, (100, 178, 212))
+        arcade.draw_lrbt_rectangle_filled(0, SCREEN_WIDTH, 265, 300, (50, 142, 180))
+        arcade.draw_arc_filled()
+
+
     def on_key_press(self, key, key_modifiers):
         """
         Called whenever a key on the keyboard is pressed.
