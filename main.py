@@ -9,16 +9,6 @@ SCREEN_HEIGHT = 720
 WINDOW_TITLE = "Starting Template"
 
 
-#RECTANGLES *
-#CERCLES *
-#TRIANGLES *
-#ARC *
-#ELLIPSE *
-#LIGNE
-#POLYGONE
-#POINT
-#TEXTE *
-
 class GameView(arcade.View):
     """
     Main application class.
@@ -71,12 +61,12 @@ class GameView(arcade.View):
         arcade.draw_lrbt_rectangle_filled(0, SCREEN_WIDTH, 615, 650, (176, 128, 188))
         arcade.draw_lrbt_rectangle_filled(0, SCREEN_WIDTH, 650, 685, (128, 124, 190))
         arcade.draw_lrbt_rectangle_filled(0, SCREEN_WIDTH, 685, SCREEN_HEIGHT, (79, 120, 192))
-
+        arcade.draw_circle_filled(640, 360, 20, (255, 227, 109))
         """
         Créer le ballon de plage et la plage.
         """
         arcade.draw_lrbt_rectangle_filled(0, SCREEN_WIDTH, 0, 200, (236, 204, 162))
-        arcade.draw_circle_filled(800, 130, 50, (255, 255, 255))
+        arcade.draw_circle_filled(800, 130, 50, (255, 255, 240))
         arcade.draw_circle_filled(800, 130, 10, (0, 207, 250))
         arcade.draw_triangle_filled(800, 138, 780, 177, 820, 177, (253, 21, 0))
         arcade.draw_triangle_filled(809, 130, 847, 110, 847, 145, (255, 214, 38))
@@ -100,11 +90,34 @@ class GameView(arcade.View):
         affichage.draw()
 
         """
-        Créer l'océan avec les vagues
+        Créer l'océan 
         """
         arcade.draw_lrbt_rectangle_filled(0, SCREEN_WIDTH, 200, 335, (0, 105, 148))
         arcade.draw_lrbt_rectangle_filled(0, SCREEN_WIDTH, 300, 335, (100, 178, 212))
         arcade.draw_lrbt_rectangle_filled(0, SCREEN_WIDTH, 265, 300, (50, 142, 180))
+
+        """
+        Créer un cerf-volant qui vole
+        """
+
+        arcade.draw_line(1100, 250, 900, 500, arcade.csscolor.BLACK, 2)
+        points_cerf_volant1 = [(900, 500), (875, 470), (875, 530)]
+        points_cerf_volant2 = [(900, 500), (950, 490), (875, 530)]
+        points_cerf_volant3 = [(900, 500), (875, 470), (965, 420)]
+        points_cerf_volant4 = [(900, 500), (950, 490), (965, 420)]
+        arcade.draw_polygon_filled(points_cerf_volant1, arcade.csscolor.ORANGE_RED)
+        arcade.draw_polygon_filled(points_cerf_volant2, arcade.csscolor.SKY_BLUE)
+        arcade.draw_polygon_filled(points_cerf_volant3, arcade.csscolor.YELLOW)
+        arcade.draw_polygon_filled(points_cerf_volant4, arcade.csscolor.DARK_BLUE)
+
+        """
+        Créer un "igloo" de sable
+        """
+        arcade.draw_arc_filled(100, 140, 100, 150, (151, 112, 88), 0, 180)
+        arcade.draw_arc_filled(100, 140, 50, 80, (182, 137, 103), 0, 180)
+        arcade.draw_point(100, 200, (182, 137, 103), 12)
+        arcade.draw_line(100, 210, 100, 260, arcade.csscolor.BLACK, 2)
+        arcade.draw_triangle_filled(101, 230, 101, 260, 130, 245, arcade.csscolor.DARK_RED)
 
     def on_key_press(self, key, key_modifiers):
         """
